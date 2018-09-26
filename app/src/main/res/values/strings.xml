@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">vsalm-FeelsBook</string>
+    <string name="fear">Fear</string>
+    <string name="happy">Joy</string>
+    <string name="sad">Sadness</string>
+    <string name="surprised">Surprise</string>
+    <string name="love">Love</string>
+    <string name="angry">Anger</string>
+    <string name="select_message">Select an Emotion: I\'m feeling...</string>
+</resources>
