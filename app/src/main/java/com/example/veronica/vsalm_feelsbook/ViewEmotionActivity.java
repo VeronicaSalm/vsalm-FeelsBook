@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.TextView;
 
 public class ViewEmotionActivity extends AppCompatActivity {
@@ -20,6 +22,13 @@ public class ViewEmotionActivity extends AppCompatActivity {
 
         TextView viewEmotionText = findViewById(R.id.viewEmotionText);
         viewEmotionText.setText("Hello you made it!");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     // Get the Intent that started this activity and extract the string
