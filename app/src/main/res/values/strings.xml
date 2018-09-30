@@ -6,5 +6,7 @@
     <string name="surprised">Surprise</string>
     <string name="love">Love</string>
     <string name="angry">Anger</string>
-    <string name="select_message">Select an Emotion: I\'m feeling...</string>
+    <string name="select_message">Select an emotion: I\'m feeling…</string>
+    <string name="history_menu">View Emotion History</string>
+    <string name="stats_menu">View Statistics</string>
 </resources>
