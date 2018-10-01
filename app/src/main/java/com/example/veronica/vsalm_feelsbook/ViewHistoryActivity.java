@@ -1,27 +1,41 @@
 package com.example.veronica.vsalm_feelsbook;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 
 public class ViewHistoryActivity extends AppCompatActivity {
+
+    ArrayList<String> emotions=new ArrayList<String>();
+    ArrayAdapter<String> adapter;
+    ListView emotionView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_emotion);
+        setContentView(R.layout.activity_view_history);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
         toolbar.setTitle(R.string.app_name);
 
-        TextView viewEmotionText = findViewById(R.id.viewEmotionText);
-        viewEmotionText.setText("Hello you made it!");
+        adapter=new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                emotions);
+
+        emotionView = (ListView) findViewById(R.id.emotionList);
+        emotionView.setAdapter(adapter);
+
+        Emotion e = (Emotion) getIntent().getSerializableExtra("Emotion");
+        adapter.add(e.getEmotionString());
     }
 
     @Override
@@ -30,12 +44,4 @@ public class ViewHistoryActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
-
-    // Get the Intent that started this activity and extract the string
-//    Intent intent = getIntent();
-//    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-    // Capture the layout's TextView and set the string as its text
-//    TextView textView = findViewById(R.id.textView);
-//    textView.setText(message);
 }

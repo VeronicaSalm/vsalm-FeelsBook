@@ -8,5 +8,6 @@ public class Joy extends Emotion {
 
     Joy() {
         super();
+        this.setTypeString("Joy");
     }
 }

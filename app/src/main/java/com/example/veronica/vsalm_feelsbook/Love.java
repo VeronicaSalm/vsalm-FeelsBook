@@ -4,6 +4,7 @@ public class Love extends Emotion {
 
     Love() {
         super();
+        this.setTypeString("Love");
     }
 
 }

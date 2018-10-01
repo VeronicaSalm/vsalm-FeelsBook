@@ -4,5 +4,6 @@ public class Fear extends Emotion {
 
     Fear() {
         super();
+        this.setTypeString("Fear");
     }
 }
