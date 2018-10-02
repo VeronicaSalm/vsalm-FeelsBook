@@ -1,5 +1,6 @@
 package com.example.veronica.vsalm_feelsbook;
 
+import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ViewHistoryActivity extends AppCompatActivity {
+public class ViewHistoryActivity extends AppCompatActivity{
     EmotionAdapter adapter;
     ListView emotionView;
 
@@ -26,7 +27,7 @@ public class ViewHistoryActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("History");
+        toolbar.setTitleTextColor(Color.WHITE);
 
         ArrayList<Emotion> emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
 
@@ -35,18 +36,21 @@ public class ViewHistoryActivity extends AppCompatActivity {
         emotionView = (ListView) findViewById(R.id.emotionList);
         emotionView.setAdapter(adapter);
 
-        emotionView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Toast.makeText(ViewHistoryActivity.this, "You clicked on an item!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
         adapter.notifyDataSetChanged();
     }
+
+//    @Override
+//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        long viewId = view.getId();
+//
+//        if (viewId == R.id.edit) {
+//            Toast.makeText(this, "Button 1 clicked", Toast.LENGTH_SHORT).show();
+//        } else if (viewId == R.id.delete) {
+//            Toast.makeText(this, "Button 2 clicked", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Toast.makeText(this, "ListView clicked" + id, Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
 
 

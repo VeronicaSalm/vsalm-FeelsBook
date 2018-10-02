@@ -1,6 +1,7 @@
 package com.example.veronica.vsalm_feelsbook;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
-        toolbar.setTitle(R.string.app_name);
+        toolbar.setTitleTextColor(Color.WHITE);
 
         final ImageButton joy_button = findViewById(R.id.joyButton);
         joy_button.setOnClickListener(new View.OnClickListener() {

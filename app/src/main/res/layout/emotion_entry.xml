@@ -64,7 +64,8 @@
                 android:layout_toRightOf="@+id/date"
                 android:contentDescription="edit"
                 android:visibility="visible"
-                app:srcCompat="@drawable/ic_mode_edit" />
+                app:srcCompat="@drawable/ic_mode_edit"
+                android:focusable="false" />
 
             <ImageButton
                 android:id="@+id/delete"
@@ -76,7 +77,8 @@
                 android:background="#0000"
                 android:contentDescription="delete"
                 android:visibility="visible"
-                app:srcCompat="@drawable/ic_delete" />
+                app:srcCompat="@drawable/ic_delete"
+                android:focusable="false" />
 
 
         </RelativeLayout>
