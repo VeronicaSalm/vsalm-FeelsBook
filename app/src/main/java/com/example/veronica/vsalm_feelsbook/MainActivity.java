@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 //    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
-ArrayList<Emotion> emotions=new ArrayList<Emotion>();
+    private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
+    private int emotion_id;
+
 
 
 
@@ -27,6 +29,8 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        emotion_id = 0;
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -36,7 +40,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton joy_button = findViewById(R.id.joyButton);
         joy_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion joy = new Joy();
+                Emotion joy = new Joy(emotion_id);
                 addEmotion(v, joy);
             }
         });
@@ -44,7 +48,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton fear_button = findViewById(R.id.fearButton);
         fear_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion fear = new Fear();
+                Emotion fear = new Fear(emotion_id);
                 addEmotion(v, fear);
             }
         });
@@ -52,7 +56,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton anger_button = findViewById(R.id.angerButton);
         anger_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion anger = new Anger();
+                Emotion anger = new Anger(emotion_id);
                 addEmotion(v, anger);
             }
         });
@@ -60,7 +64,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton sad_button = findViewById(R.id.sadButton);
         sad_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion sad = new Sadness();
+                Emotion sad = new Sadness(emotion_id);
                 addEmotion(v, sad);
             }
         });
@@ -68,7 +72,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton surprised_button = findViewById(R.id.surprisedButton);
         surprised_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion surprised = new Surprise();
+                Emotion surprised = new Surprise(emotion_id);
                 addEmotion(v, surprised);
             }
         });
@@ -76,7 +80,7 @@ ArrayList<Emotion> emotions=new ArrayList<Emotion>();
         final ImageButton love_button = findViewById(R.id.loveButton);
         love_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion love = new Love();
+                Emotion love = new Love(emotion_id);
                 addEmotion(v, love);
             }
         });

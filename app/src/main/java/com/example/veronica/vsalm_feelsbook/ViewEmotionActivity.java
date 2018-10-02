@@ -31,6 +31,7 @@ public class ViewEmotionActivity extends AppCompatActivity {
         return true;
     }
 
+
     // Get the Intent that started this activity and extract the string
 //    Intent intent = getIntent();
 //    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);

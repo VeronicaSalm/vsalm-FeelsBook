@@ -13,14 +13,14 @@ import java.util.ArrayList;
 
 public class EmotionAdapter extends ArrayAdapter<Emotion> {
     public EmotionAdapter(Context context, ArrayList<Emotion> emotions) {
-        super(context, 0, emotions);
+        super(context, R.layout.emotion_entry, emotions);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Emotion emotion = getItem(position);
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_view_history, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.emotion_entry, parent, false);
         }
         TextView type = (TextView) convertView.findViewById(R.id.type);
         TextView date = (TextView) convertView.findViewById(R.id.date);

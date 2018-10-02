@@ -2,9 +2,8 @@ package com.example.veronica.vsalm_feelsbook;
 
 public class Sadness extends Emotion {
 
-    Sadness() {
-
-        super();
+    Sadness(int id) {
+        super(id);
         this.setTypeString("Sadness");
     }
 }
