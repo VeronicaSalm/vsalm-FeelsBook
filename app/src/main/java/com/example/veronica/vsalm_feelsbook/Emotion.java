@@ -30,10 +30,11 @@ public abstract class Emotion implements Serializable {
     Date getTimestamp() { return this.timestamp; }
     void setComment(String new_c) { this.comment = new_c; }
     void setTimestamp(Date t) { this.timestamp = t; }
+    String getTimestampString() {return this.timestamp.toString(); }
     String getTypeString() { return this.type; }
     void setTypeString(String t) { this.type = t; }
 
-    String getEmotionString() {
+    public String toString() {
         String emotion_string = this.type + " | " + this.timestamp.toString()
                                 + " | " + this.comment;
 

@@ -12,9 +12,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ViewHistoryActivity extends AppCompatActivity {
-
-    ArrayList<String> emotions=new ArrayList<String>();
-    ArrayAdapter<String> adapter;
+    EmotionAdapter adapter;
     ListView emotionView;
 
     @Override
@@ -27,15 +25,21 @@ public class ViewHistoryActivity extends AppCompatActivity {
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
         toolbar.setTitle(R.string.app_name);
 
-        adapter=new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
+        ArrayList<Emotion> emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
+
+//        for (Emotion e: emotions) {
+//            adapter.add(e.getEmotionString());
+//        }
+
+
+        adapter=new EmotionAdapter(this,
                 emotions);
 
         emotionView = (ListView) findViewById(R.id.emotionList);
         emotionView.setAdapter(adapter);
 
-        Emotion e = (Emotion) getIntent().getSerializableExtra("Emotion");
-        adapter.add(e.getEmotionString());
+        adapter.notifyDataSetChanged();
+//
     }
 
     @Override
