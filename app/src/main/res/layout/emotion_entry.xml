@@ -6,6 +6,7 @@
     android:paddingTop="10dp"
     android:paddingBottom="10dp">
 
+
     <!--<ImageView-->
         <!--android:id="@+id/emoji"-->
         <!--android:layout_width="100dp"-->
