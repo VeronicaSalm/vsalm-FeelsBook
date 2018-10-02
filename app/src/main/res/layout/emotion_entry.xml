@@ -2,9 +2,91 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     android:paddingBottom="10dp">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/emoji"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:contentDescription="Emoji image" />-->
+    <!--android:layout_toRightOf="@+id/emoji"-->
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/emotion_info"
+        android:layout_width="306dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp" />
+
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/buttons"
+        android:layout_width="118dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/emotion_info"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="edit"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_action_add" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:contentDescription="delete"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_action_pie_chart" />
+
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
 
 
     <!--<ImageView-->
