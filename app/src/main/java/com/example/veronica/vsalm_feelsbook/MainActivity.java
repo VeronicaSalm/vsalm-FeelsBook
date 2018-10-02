@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion joy = new Joy(emotion_id);
                 addEmotion(v, joy);
+                emotion_id += 1;
             }
         });
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion fear = new Fear(emotion_id);
                 addEmotion(v, fear);
+                emotion_id += 1;
             }
         });
 
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion anger = new Anger(emotion_id);
                 addEmotion(v, anger);
+                emotion_id += 1;
             }
         });
 
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion sad = new Sadness(emotion_id);
                 addEmotion(v, sad);
+                emotion_id += 1;
             }
         });
 
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion surprised = new Surprise(emotion_id);
                 addEmotion(v, surprised);
+                emotion_id += 1;
             }
         });
 
@@ -83,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Emotion love = new Love(emotion_id);
                 addEmotion(v, love);
+                emotion_id += 1;
             }
         });
 
@@ -101,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
     public void addEmotion(View view, Emotion e) {
         Intent intent = new Intent(this, ViewHistoryActivity.class);
         emotions.add(e);
-
         intent.putExtra("Emotions", emotions);
         startActivity(intent);
     }
@@ -131,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
 
     @Override

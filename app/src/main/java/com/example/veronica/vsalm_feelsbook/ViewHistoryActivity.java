@@ -16,9 +16,10 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ViewHistoryActivity extends AppCompatActivity{
+public class ViewHistoryActivity extends AppCompatActivity {
     EmotionAdapter adapter;
     ListView emotionView;
+    ArrayList<Emotion> emotions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class ViewHistoryActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
 
-        ArrayList<Emotion> emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
+        emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
 
         adapter=new EmotionAdapter(this, emotions);
 
@@ -43,6 +44,8 @@ public class ViewHistoryActivity extends AppCompatActivity{
 //    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //        long viewId = view.getId();
 //
+//        Toast.makeText(this, "Something happened!", Toast.LENGTH_SHORT).show();
+//
 //        if (viewId == R.id.edit) {
 //            Toast.makeText(this, "Button 1 clicked", Toast.LENGTH_SHORT).show();
 //        } else if (viewId == R.id.delete) {
@@ -52,7 +55,9 @@ public class ViewHistoryActivity extends AppCompatActivity{
 //        }
 //    }
 
-
+    public void deleteEmotion(int position) {
+        emotions.remove(position);
+    }
 
 
 

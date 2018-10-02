@@ -19,8 +19,14 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class EmotionAdapter extends ArrayAdapter<Emotion> {
+
+    ArrayList<Emotion> emotions;
+    Context context;
+
     public EmotionAdapter(Context context, ArrayList<Emotion> emotions) {
         super(context, R.layout.emotion_entry, emotions);
+        this.emotions = emotions;
+        this.context = context;
     }
 
     @Override
@@ -42,7 +48,10 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
                 @Override
                 public void onClick(View v){
                     Toast.makeText(getContext(), "Delete " + position, Toast.LENGTH_SHORT).show();
-//                    ((ListView) parent).performItemClick(v, position, 0); // Let the event be handled in onItemClick()
+
+                    ((ViewHistoryActivity) context).deleteEmotion(position);
+
+                    EmotionAdapter.this.notifyDataSetChanged();
                 }
             });
             viewHolder.edit = (ImageButton) convertView.findViewById(R.id.edit);
@@ -50,8 +59,6 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
                 @Override
                 public void onClick(View v){
                     Toast.makeText(getContext(), "Edit " + position, Toast.LENGTH_SHORT).show();
-
-//                    ((ListView) parent).performItemClick(v, position, 0); // Let the event be handled in onItemClick()
                 }
             });
             convertView.setTag(viewHolder);
@@ -64,6 +71,8 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
             myViewHolder.comment.setText(emotion.getComment());
 
         }
+
+
 
 
 
