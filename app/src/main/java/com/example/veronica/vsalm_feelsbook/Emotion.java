@@ -3,7 +3,10 @@ package com.example.veronica.vsalm_feelsbook;
 import android.media.Image;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public abstract class Emotion implements Serializable {
 
@@ -36,17 +39,18 @@ public abstract class Emotion implements Serializable {
     Date getTimestamp() { return this.timestamp; }
     void setComment(String new_c) { this.comment = new_c; }
     void setTimestamp(Date t) { this.timestamp = t; }
-    String getTimestampString() {return this.timestamp.toString(); }
+    String getTimestampString() {
+        SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy hh:mm a");
+        return df.format(this.timestamp);
+    }
     String getTypeString() { return this.type; }
     void setTypeString(String t) { this.type = t; }
     void setId(int id) {this.id = id;}
     int getId() { return this.id; }
 
     public String toString() {
-        String emotion_string = this.type + " | " + this.timestamp.toString()
+        return this.type + " | " + this.timestamp.toString()
                                 + " | " + this.comment;
-
-        return emotion_string;
     }
 
 }
