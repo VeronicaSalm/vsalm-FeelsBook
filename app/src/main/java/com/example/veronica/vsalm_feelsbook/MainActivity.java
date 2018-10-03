@@ -95,27 +95,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    public void viewEmotion(View view) {
-        Intent intent = new Intent(this, ViewEmotionActivity.class);
-//        EditText editText = (EditText) findViewById(R.id.editText);
-//        ImageButton love = (ImageButton) findViewById(R.id.loveButton);
-//        String message = editText.getText().toString();
-//        intent.putExtra("Hello World", helloworld);
-        startActivity(intent);
-    }
-
     public void addEmotion(View view, Emotion e) {
-        Intent intent = new Intent(this, ViewHistoryActivity.class);
         emotions.add(e);
-        intent.putExtra("Emotions", emotions);
-        startActivityForResult(intent, EMOTIONS_BACK);
+        viewHistory();
+
     }
 
     public void viewHistory() {
         Intent intent = new Intent(this, ViewHistoryActivity.class);
         intent.putExtra("Emotions", emotions);
-        startActivity(intent);
+        startActivityForResult(intent, EMOTIONS_BACK);
     }
 
     public void viewStats() {

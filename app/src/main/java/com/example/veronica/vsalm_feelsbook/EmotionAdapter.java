@@ -59,6 +59,9 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
                 @Override
                 public void onClick(View v){
                     Toast.makeText(getContext(), "Edit " + position, Toast.LENGTH_SHORT).show();
+                    ((ViewHistoryActivity) context).editEmotion(position, parent);
+
+                    EmotionAdapter.this.notifyDataSetChanged();
                 }
             });
             convertView.setTag(viewHolder);
