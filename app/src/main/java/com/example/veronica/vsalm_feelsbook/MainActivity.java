@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 //    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
     private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
     private int emotion_id;
+    private static final Integer MAX_CHARS = 100;
     private int EMOTIONS_BACK = 1;
 
 
@@ -96,9 +98,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addEmotion(View view, Emotion e) {
-        emotions.add(e);
-        emotion_id += 1;
-        viewHistory();
+
+        if (e.getComment().length() <= MAX_CHARS ) {
+            emotions.add(e);
+            emotion_id += 1;
+            viewHistory();
+        } else {
+            Toast.makeText(this, "Comment must be less than 100 characters, not " + e.getComment().length(), Toast.LENGTH_LONG).show();
+        }
+
 
     }
 
