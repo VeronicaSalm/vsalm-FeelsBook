@@ -9,5 +9,6 @@ public class Joy extends Emotion {
     Joy(int id, String comment) {
         super(id, comment);
         this.setTypeString("Joy");
+        this.setEmoji(R.drawable.joy_small);
     }
 }

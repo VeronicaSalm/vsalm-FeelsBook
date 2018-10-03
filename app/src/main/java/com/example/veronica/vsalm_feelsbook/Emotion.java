@@ -14,17 +14,20 @@ public abstract class Emotion implements Serializable {
     private String comment;
     private String type;
     private int id;
+    private int emoji;
 
     Emotion(Date t, String c, int id) {
         this.timestamp = t;
         this.comment = c;
         this.id = id;
+        this.emoji = R.drawable.joy_small;
     }
 
     Emotion(String c, int id) {
         this.timestamp = new Date(System.currentTimeMillis());
         this.comment = c;
         this.id = id;
+        this.emoji = R.drawable.joy_small;
 
     }
 
@@ -47,6 +50,8 @@ public abstract class Emotion implements Serializable {
     void setTypeString(String t) { this.type = t; }
     void setId(int id) {this.id = id;}
     int getId() { return this.id; }
+    void setEmoji(int imgid) {this.emoji = imgid; }
+    int getEmoji() {return this.emoji;}
 
     public String toString() {
         return this.type + " | " + this.timestamp.toString()

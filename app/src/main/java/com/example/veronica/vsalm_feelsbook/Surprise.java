@@ -5,6 +5,7 @@ public class Surprise extends Emotion {
     Surprise(int id, String comment) {
         super(id, comment);
         this.setTypeString("Surprise");
+        this.setEmoji(R.drawable.surprised_small);
     }
 
 }

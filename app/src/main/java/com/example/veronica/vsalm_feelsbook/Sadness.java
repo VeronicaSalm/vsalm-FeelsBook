@@ -5,5 +5,6 @@ public class Sadness extends Emotion {
     Sadness(int id, String comment) {
         super(id, comment);
         this.setTypeString("Sadness");
+        this.setEmoji(R.drawable.sad_small);
     }
 }
