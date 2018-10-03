@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 //    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
     private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
     private int emotion_id;
+    private int EMOTIONS_BACK = 1;
 
 
 
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewHistoryActivity.class);
         emotions.add(e);
         intent.putExtra("Emotions", emotions);
-        startActivity(intent);
+        startActivityForResult(intent, EMOTIONS_BACK);
     }
 
     public void viewHistory() {
@@ -134,6 +135,18 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == EMOTIONS_BACK) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                emotions = (ArrayList<Emotion>) data.getSerializableExtra("Emotions");
+            }
         }
     }
 

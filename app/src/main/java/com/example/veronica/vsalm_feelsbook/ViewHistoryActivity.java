@@ -1,5 +1,7 @@
 package com.example.veronica.vsalm_feelsbook;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +40,11 @@ public class ViewHistoryActivity extends AppCompatActivity {
         emotionView.setAdapter(adapter);
 
         adapter.notifyDataSetChanged();
+
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("Emotions", emotions);
+        setResult(Activity.RESULT_OK, resultIntent);
+//        finish();
     }
 
 //    @Override
