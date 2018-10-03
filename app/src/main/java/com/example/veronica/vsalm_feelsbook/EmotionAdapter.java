@@ -39,10 +39,12 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
             viewHolder.type = (TextView) convertView.findViewById(R.id.type);
             viewHolder.date = (TextView) convertView.findViewById(R.id.date);
             viewHolder.comment = (TextView) convertView.findViewById(R.id.comment);
+            viewHolder.emoji = (ImageView) convertView.findViewById(R.id.emoji);
 
             viewHolder.type.setText(emotion.getTypeString());
             viewHolder.date.setText(emotion.getTimestampString());
             viewHolder.comment.setText(emotion.getComment());
+            viewHolder.emoji.setImageResource(emotion.getEmoji());
 
             viewHolder.delete = (ImageButton) convertView.findViewById(R.id.delete);
             viewHolder.delete.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +75,7 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
             myViewHolder.type.setText(emotion.getTypeString());
             myViewHolder.date.setText(emotion.getTimestampString());
             myViewHolder.comment.setText(emotion.getComment());
+            myViewHolder.emoji.setImageResource(emotion.getEmoji());
 
         }
 
