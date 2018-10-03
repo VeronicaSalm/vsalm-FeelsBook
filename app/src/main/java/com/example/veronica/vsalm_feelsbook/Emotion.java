@@ -4,6 +4,7 @@ import android.media.Image;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -15,19 +16,18 @@ public abstract class Emotion implements Serializable {
     private String type;
     private int id;
     private int emoji;
+    private static String[] type_list = {"Joy", "Anger", "Fear", "Sadness", "Love", "Surprise"};
 
-    Emotion(Date t, String c, int id) {
+    Emotion(int id, String c, Date t) {
         this.timestamp = t;
         this.comment = c;
         this.id = id;
-        this.emoji = R.drawable.joy_small;
     }
 
     Emotion(String c, int id) {
         this.timestamp = new Date(System.currentTimeMillis());
         this.comment = c;
         this.id = id;
-        this.emoji = R.drawable.joy_small;
 
     }
 
@@ -38,24 +38,28 @@ public abstract class Emotion implements Serializable {
 
     }
 
-    String getComment() { return this.comment; }
-    Date getTimestamp() { return this.timestamp; }
-    void setComment(String new_c) { this.comment = new_c; }
-    void setTimestamp(Date t) { this.timestamp = t; }
-    String getTimestampString() {
+    public String getComment() { return this.comment; }
+    public Date getTimestamp() { return this.timestamp; }
+    public void setComment(String new_c) { this.comment = new_c; }
+    public void setTimestamp(Date t) { this.timestamp = t; }
+    public  String getTimestampString() {
         SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy hh:mm a");
         return df.format(this.timestamp);
     }
-    String getTypeString() { return this.type; }
-    void setTypeString(String t) { this.type = t; }
-    void setId(int id) {this.id = id;}
-    int getId() { return this.id; }
-    void setEmoji(int imgid) {this.emoji = imgid; }
-    int getEmoji() {return this.emoji;}
+    public String getTypeString() { return this.type; }
+    public void setTypeString(String t) { this.type = t; }
+    public void setId(int id) {this.id = id;}
+    public int getId() { return this.id; }
+    public void setEmoji(int imgid) {this.emoji = imgid; }
+    public int getEmoji() {return this.emoji;}
 
     public String toString() {
         return this.type + " | " + this.timestamp.toString()
                                 + " | " + this.comment;
+    }
+
+    public static String[] getTypes() {
+        return type_list;
     }
 
 }

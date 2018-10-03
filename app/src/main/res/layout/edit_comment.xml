@@ -3,15 +3,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
     android:orientation="vertical">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change emotion type:        "
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/emotions_spinner"
+        android:spinnerMode="dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Comment:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edit_comment_box"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edit_comment" />
+        android:text="" />
+
+
 
     <Button
-        android:id="@+id/okay_button1"
+        android:id="@+id/confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm" />

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 //    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
-        toolbar.setTitleTextColor(Color.WHITE);
+//        toolbar.setTitleTextColor(Color.WHITE);
 
         final ImageButton joy_button = findViewById(R.id.joyButton);
         joy_button.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             emotion_id += 1;
             viewHistory();
         } else {
-            Toast.makeText(this, "Comment must be less than 100 characters, not " + e.getComment().length(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Comment must be at most 100 characters, not " + e.getComment().length(), Toast.LENGTH_LONG).show();
         }
 
 
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void viewStats() {
         Intent intent = new Intent(this, ViewStatsActivity.class);
+        intent.putExtra("Emotions", emotions);
         startActivity(intent);
     }
 
