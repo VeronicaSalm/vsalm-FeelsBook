@@ -26,11 +26,11 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/group2"
-        app:layout_constraintVertical_bias="0.23"
-        app:srcCompat="@drawable/in_love" />
+        app:layout_constraintVertical_bias="0.675"
+        app:srcCompat="@drawable/in_love_medium" />
 
     <TextView
         android:id="@+id/textView"
@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.192" />
 
     <TextView
         android:id="@+id/textView2"
@@ -67,8 +67,8 @@
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58"
-        app:srcCompat="@drawable/sad" />
+        app:layout_constraintVertical_bias="0.675"
+        app:srcCompat="@drawable/sad_medium" />
 
     <ImageButton
         android:id="@+id/fearButton"
@@ -77,11 +77,10 @@
         android:background="#0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232"
-        app:srcCompat="@drawable/scared" />
+        app:layout_constraintVertical_bias="0.675"
+        app:srcCompat="@drawable/scared_medium" />
 
     <ImageButton
         android:id="@+id/surprisedButton"
@@ -90,11 +89,11 @@
         android:background="#0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        app:srcCompat="@drawable/surprised" />
+        app:layout_constraintVertical_bias="0.898"
+        app:srcCompat="@drawable/surprised_medium" />
 
     <ImageButton
         android:id="@+id/joyButton"
@@ -103,11 +102,10 @@
         android:background="#0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578"
-        app:srcCompat="@drawable/happy" />
+        app:layout_constraintVertical_bias="0.898"
+        app:srcCompat="@drawable/joy_medium" />
 
     <ImageButton
         android:id="@+id/angerButton"
@@ -119,11 +117,23 @@
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        app:srcCompat="@drawable/mad" />
+        app:layout_constraintVertical_bias="0.898"
+        app:srcCompat="@drawable/mad_medium" />
 
     <TextView
         android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fear"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sadButton"
+        app:layout_constraintEnd_toEndOf="@+id/fearButton"
+        app:layout_constraintStart_toStartOf="@+id/fearButton"
+        app:layout_constraintTop_toBottomOf="@+id/fearButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fear"
@@ -202,5 +212,38 @@
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterComment"
+        android:layout_width="277dp"
+        android:layout_height="132dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginRight="53dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Optional Comment"
+        app:layout_constraintBottom_toTopOf="@+id/fearButton"
+        app:layout_constraintEnd_toEndOf="@+id/enterComment"
+        app:layout_constraintStart_toStartOf="@+id/enterComment"
+        app:layout_constraintTop_toBottomOf="@+id/enterComment"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

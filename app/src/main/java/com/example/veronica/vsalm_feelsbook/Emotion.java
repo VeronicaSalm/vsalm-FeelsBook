@@ -28,9 +28,9 @@ public abstract class Emotion implements Serializable {
 
     }
 
-    Emotion(int id) {
+    Emotion(int id, String comment) {
         this.timestamp = new Date(System.currentTimeMillis());
-        this.comment = "";
+        this.comment = comment;
         this.id = id;
 
     }

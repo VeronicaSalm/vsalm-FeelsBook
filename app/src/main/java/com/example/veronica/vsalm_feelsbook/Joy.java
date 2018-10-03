@@ -6,8 +6,8 @@ public class Joy extends Emotion {
     // colour
     // associated string/type?
 
-    Joy(int id) {
-        super(id);
+    Joy(int id, String comment) {
+        super(id, comment);
         this.setTypeString("Joy");
     }
 }

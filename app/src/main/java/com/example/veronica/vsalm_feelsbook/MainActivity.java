@@ -42,54 +42,54 @@ public class MainActivity extends AppCompatActivity {
         final ImageButton joy_button = findViewById(R.id.joyButton);
         joy_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion joy = new Joy(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion joy = new Joy(emotion_id, comment.getText().toString());
                 addEmotion(v, joy);
-                emotion_id += 1;
             }
         });
 
         final ImageButton fear_button = findViewById(R.id.fearButton);
         fear_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion fear = new Fear(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion fear = new Fear(emotion_id, comment.getText().toString());
                 addEmotion(v, fear);
-                emotion_id += 1;
             }
         });
 
         final ImageButton anger_button = findViewById(R.id.angerButton);
         anger_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion anger = new Anger(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion anger = new Anger(emotion_id, comment.getText().toString());
                 addEmotion(v, anger);
-                emotion_id += 1;
             }
         });
 
         final ImageButton sad_button = findViewById(R.id.sadButton);
         sad_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion sad = new Sadness(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion sad = new Sadness(emotion_id, comment.getText().toString());
                 addEmotion(v, sad);
-                emotion_id += 1;
             }
         });
 
         final ImageButton surprised_button = findViewById(R.id.surprisedButton);
         surprised_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion surprised = new Surprise(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion surprised = new Surprise(emotion_id, comment.getText().toString());
                 addEmotion(v, surprised);
-                emotion_id += 1;
             }
         });
 
         final ImageButton love_button = findViewById(R.id.loveButton);
         love_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Emotion love = new Love(emotion_id);
+                EditText comment = (EditText) findViewById(R.id.enterComment);
+                Emotion love = new Love(emotion_id, comment.getText().toString());
                 addEmotion(v, love);
-                emotion_id += 1;
             }
         });
 
@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addEmotion(View view, Emotion e) {
         emotions.add(e);
+        emotion_id += 1;
         viewHistory();
 
     }
