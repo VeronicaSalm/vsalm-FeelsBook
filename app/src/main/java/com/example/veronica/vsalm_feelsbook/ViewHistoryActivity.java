@@ -1,6 +1,8 @@
 package com.example.veronica.vsalm_feelsbook;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
@@ -18,12 +20,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
@@ -31,6 +35,8 @@ import org.w3c.dom.Text;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 public class ViewHistoryActivity extends AppCompatActivity {
@@ -89,7 +95,7 @@ public class ViewHistoryActivity extends AppCompatActivity {
         // inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.edit_comment, null);
+        final View popupView = inflater.inflate(R.layout.edit_comment, null);
 
 
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -121,15 +127,75 @@ public class ViewHistoryActivity extends AppCompatActivity {
 
         Date date = e.getTimestamp();
 
-        TextView date_text = (TextView) popupView.findViewById(R.id.date_text);
-        TextView time_text = (TextView) popupView.findViewById(R.id.time_text);
+        final TextView date_text = (TextView) popupView.findViewById(R.id.date_text);
+        final TextView time_text = (TextView) popupView.findViewById(R.id.time_text);
+        Button date_button = (Button) popupView.findViewById(R.id.date_button);
+        Button time_button = (Button) popupView.findViewById(R.id.time_button);
         date_text.setText(e.getDateString());
         time_text.setText(e.getTimeString());
 
-        Calendar calendar = Calendar.getInstance();
+        final Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
 
-        int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+        date_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                int mYear = calendar.get(Calendar.YEAR);
+                int mMonth = calendar.get(Calendar.MONTH);
+                int mDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(ViewHistoryActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
+
+                                calendar.set(Calendar.YEAR, year);
+                                calendar.set(Calendar.MONTH, monthOfYear);
+                                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                Date d = calendar.getTime();
+                                e.setTimestamp(d);
+
+                                date_text.setText(e.getDateString());
+
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
+            }
+        });
+
+        time_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                int mHour = calendar.get(Calendar.HOUR_OF_DAY);
+                int mMinute = calendar.get(Calendar.MINUTE);
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(ViewHistoryActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay,
+                                                  int minute) {
+
+                                calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+                                calendar.set(Calendar.MINUTE, minute);
+
+                                Date d = calendar.getTime();
+                                e.setTimestamp(d);
+
+                                time_text.setText(e.getTimeString());
+
+                            }
+                        }, mHour, mMinute, false);
+                timePickerDialog.show();
+            }
+        });
+
+
+
 
 
 
@@ -155,6 +221,16 @@ public class ViewHistoryActivity extends AppCompatActivity {
                 if (new_type.equals(type)) {
                     e.setComment(new_comment);
                     emotions.set(position, e);
+                    // sort here
+                    Collections.sort(emotions, new Comparator<Emotion>() {
+                        @Override
+                        public int compare(Emotion e1, Emotion e2) {
+                            return e1.getTimestamp().compareTo(e2.getTimestamp());
+                        }
+                    });
+
+
+
                     adapter.notifyDataSetChanged();
                 }
                 else {
@@ -186,6 +262,13 @@ public class ViewHistoryActivity extends AppCompatActivity {
                     }
 
                     emotions.set(position, new_e);
+                    // sort here
+                    Collections.sort(emotions, new Comparator<Emotion>() {
+                        @Override
+                        public int compare(Emotion e1, Emotion e2) {
+                            return e1.getTimestamp().compareTo(e2.getTimestamp());
+                        }
+                    });
                     adapter.notifyDataSetChanged();
                 }
             }
