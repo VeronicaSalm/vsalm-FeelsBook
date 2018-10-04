@@ -50,21 +50,17 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
             viewHolder.delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    Toast.makeText(getContext(), "Delete " + position, Toast.LENGTH_SHORT).show();
-
-                    ((ViewHistoryActivity) context).deleteEmotion(position);
-
-                    EmotionAdapter.this.notifyDataSetChanged();
+                    EditEmotion edit = new EditEmotion(context, parent, emotions, position);
+                    edit.deleteEmotion();
                 }
             });
             viewHolder.edit = (ImageButton) convertView.findViewById(R.id.edit);
             viewHolder.edit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    Toast.makeText(getContext(), "Edit " + position, Toast.LENGTH_SHORT).show();
-                    ((ViewHistoryActivity) context).editEmotion(position, parent);
+                    EditEmotion edit = new EditEmotion(context, parent, emotions, position);
+                    edit.editEmotion();
 
-                    EmotionAdapter.this.notifyDataSetChanged();
                 }
             });
             convertView.setTag(viewHolder);

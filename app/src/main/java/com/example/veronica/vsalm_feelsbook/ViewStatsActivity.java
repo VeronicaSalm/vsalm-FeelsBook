@@ -29,7 +29,7 @@ public class ViewStatsActivity extends AppCompatActivity {
 
         emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
 
-        displayEmotionCount();
+        displayStats();
 
 
     }
@@ -38,6 +38,20 @@ public class ViewStatsActivity extends AppCompatActivity {
 //    protected void onPause() {
 //        super.onPause();
 //    }
+
+    public void displayStats() {
+        // compute necessary values
+        Map<String, Integer> emotion_counts = getEmotionCounts();
+        displayEmotionCounts(emotion_counts);
+//        displayPieChart(emotion_counts);
+
+
+    }
+
+    public void displayPieChart(Map<String, Integer> emotion_counts) {
+        // compute necessary values
+
+    }
 
     public Map<String, Integer> getEmotionCounts() {
 
@@ -55,9 +69,8 @@ public class ViewStatsActivity extends AppCompatActivity {
         return emotion_counts;
     }
 
-    public void displayEmotionCount() {
+    public void displayEmotionCounts(Map<String, Integer> emotion_counts) {
 
-        Map<String, Integer> emotion_counts = getEmotionCounts();
         TextView joy = (TextView) findViewById(R.id.joyCount);
         TextView fear = (TextView) findViewById(R.id.fearCount);
         TextView anger = (TextView) findViewById(R.id.angerCount);
