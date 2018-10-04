@@ -23,10 +23,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class ViewHistoryActivity extends AppCompatActivity {
@@ -111,6 +115,25 @@ public class ViewHistoryActivity extends AppCompatActivity {
         }
 
         Button confirm_button = (Button) popupView.findViewById(R.id.confirm);
+
+
+        // date and time
+
+        Date date = e.getTimestamp();
+
+        TextView date_text = (TextView) popupView.findViewById(R.id.date_text);
+        TextView time_text = (TextView) popupView.findViewById(R.id.time_text);
+        date_text.setText(e.getDateString());
+        time_text.setText(e.getTimeString());
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+
+        int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+
+
+
+
 //
         // show the popup window
         // which view you pass in doesn't matter, it is only used for the window token

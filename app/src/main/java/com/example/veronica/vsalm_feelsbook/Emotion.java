@@ -46,6 +46,17 @@ public abstract class Emotion implements Serializable {
         SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy hh:mm a");
         return df.format(this.timestamp);
     }
+
+    public  String getTimeString() {
+        SimpleDateFormat df = new SimpleDateFormat("hh:mm a");
+        return df.format(this.timestamp);
+    }
+
+    public String getDateString() {
+        SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy");
+        return df.format(this.timestamp);
+
+    }
     public String getTypeString() { return this.type; }
     public void setTypeString(String t) { this.type = t; }
     public void setId(int id) {this.id = id;}
