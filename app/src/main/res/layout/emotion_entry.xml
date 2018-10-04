@@ -57,12 +57,12 @@
 
             <ImageButton
                 android:id="@+id/edit"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/date"
+                android:layout_marginTop="3dp"
                 android:background="#0000"
-                android:layout_toRightOf="@+id/date"
                 android:contentDescription="edit"
                 android:visibility="visible"
                 app:srcCompat="@drawable/ic_mode_edit"
@@ -73,14 +73,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/edit"
+                android:layout_toRightOf="@id/edit"
                 android:layout_marginTop="3dp"
                 android:background="#0000"
                 android:contentDescription="delete"
                 android:visibility="visible"
                 app:srcCompat="@drawable/ic_delete"
                 android:focusable="false" />
-
 
         </RelativeLayout>
 
