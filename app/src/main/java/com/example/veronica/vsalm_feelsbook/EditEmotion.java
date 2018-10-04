@@ -19,6 +19,7 @@ import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,6 +30,9 @@ import java.util.Date;
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 public class EditEmotion {
+
+    private static final Integer MAX_CHARS = 100;
+
 
     private Emotion e;
     private View popupView;
@@ -62,7 +66,9 @@ public class EditEmotion {
 
     public Spinner setUpSpinner(View popupView, Emotion e) {
         Spinner spinner = (Spinner) popupView.findViewById(R.id.emotions_spinner);
-        ArrayAdapter<String> sAdapter = new ArrayAdapter<String>(ctx,android.R.layout.simple_list_item_1,Emotion.getTypes());
+        ArrayAdapter<String> sAdapter = new ArrayAdapter<String>(ctx,
+                                                    android.R.layout.simple_list_item_1,
+                                                    Emotion.getTypes());
 
         sAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(sAdapter);
@@ -85,13 +91,23 @@ public class EditEmotion {
 
     }
 
-    public void sortEmotions() {
+    public static ArrayList<Emotion> sortEmotions(ArrayList<Emotion> emotions) {
         Collections.sort(emotions, new Comparator<Emotion>() {
             @Override
             public int compare(Emotion e1, Emotion e2) {
                 return e1.getTimestamp().compareTo(e2.getTimestamp());
             }
         });
+        return emotions;
+    }
+
+    public static boolean validCommentLength(String comment) {
+        if (comment.length() <= MAX_CHARS) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     private void editDate(Button date_button, final TextView date_text, final Calendar calendar) {
@@ -165,6 +181,13 @@ public class EditEmotion {
 
                 String new_type = spinner.getSelectedItem().toString();
                 String new_comment = comment_box.getText().toString();
+
+                if (!EditEmotion.validCommentLength(new_comment)) {
+                    Toast.makeText(ctx, "Comment must be at most 100 characters, not "
+                                        + new_comment.length()
+                                        + ". Comment not changed.", Toast.LENGTH_LONG).show();
+                    new_comment = e.getComment();
+                }
                 int id = e.getId();
                 Date new_timestamp = e.getTimestamp();
 
@@ -196,7 +219,7 @@ public class EditEmotion {
 
                 emotions.set(position, new_e);
                 // sort here
-                sortEmotions();
+                emotions = sortEmotions(emotions);
 
                 // notify the adapter that the data has changed
                 ((ViewHistoryActivity) ctx).notifyAdapter();

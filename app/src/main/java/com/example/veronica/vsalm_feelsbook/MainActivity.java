@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 //    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
     private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
     private int emotion_id;
-    private static final Integer MAX_CHARS = 100;
     private int EMOTIONS_BACK = 1;
 
 
@@ -100,10 +99,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void addEmotion(View view, Emotion e) {
 
-        if (e.getComment().length() <= MAX_CHARS ) {
+        if (EditEmotion.validCommentLength(e.getComment())) {
             emotions.add(e);
             emotion_id += 1;
-            viewHistory();
+//            viewHistory();
+            emotions = EditEmotion.sortEmotions(emotions);
+            Toast.makeText(this, "Added " + e.getTypeString() + " emotion", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Comment must be at most 100 characters, not " + e.getComment().length(), Toast.LENGTH_LONG).show();
         }
