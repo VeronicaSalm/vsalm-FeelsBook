@@ -188,27 +188,26 @@ public class EditEmotion {
                                         + ". Comment not changed.", Toast.LENGTH_LONG).show();
                     new_comment = e.getComment();
                 }
-                int id = e.getId();
                 Date new_timestamp = e.getTimestamp();
 
                 Emotion new_e;
                 if (new_type.equals("Joy")) {
-                    new_e = new Joy(id, new_comment, new_timestamp);
+                    new_e = new Joy(new_comment, new_timestamp);
                 }
                 else if (new_type.equals("Fear")) {
-                    new_e = new Fear(id, new_comment, new_timestamp);
+                    new_e = new Fear(new_comment, new_timestamp);
                 }
                 else if (new_type.equals("Anger")) {
-                    new_e = new Anger(id, new_comment, new_timestamp);
+                    new_e = new Anger(new_comment, new_timestamp);
                 }
                 else if (new_type.equals("Love")) {
-                    new_e = new Love(id, new_comment, new_timestamp);
+                    new_e = new Love(new_comment, new_timestamp);
                 }
                 else if (new_type.equals("Sadness")) {
-                    new_e = new Sadness(id, new_comment, new_timestamp);
+                    new_e = new Sadness(new_comment, new_timestamp);
                 }
                 else if (new_type.equals("Surprise")) {
-                    new_e = new Surprise(id, new_comment, new_timestamp);
+                    new_e = new Surprise(new_comment, new_timestamp);
 
                 }
                 else {

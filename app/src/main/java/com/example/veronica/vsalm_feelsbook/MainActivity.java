@@ -1,7 +1,6 @@
 package com.example.veronica.vsalm_feelsbook;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,43 +8,37 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-//    public static final String EXTRA_MESSAGE = "com.example.vsalm_feelsbook.MESSAGE";
+
+    // the main activity tracks a list of emotions
     private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
-    private int emotion_id;
+    // needed for retrieving modified emotion list from the history view
     private int EMOTIONS_BACK = 1;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // set xml layout to the main activity
         setContentView(R.layout.activity_main);
 
-        emotion_id = 0;
-
+        // use of custom toolbar for stats and history pages
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        toolbar.setNavigationIcon(R.drawable.ic_launcher_foreground);
-//        toolbar.setTitleTextColor(Color.WHITE);
 
+        // set up button listeners for each emotion type
+        // when a button is clicked, create the appropriate emotion
+        // and pass it to addEmotion for comment length checking and
+        // addition to the emotion list
         final ImageButton joy_button = findViewById(R.id.joyButton);
         joy_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion joy = new Joy(emotion_id, comment.getText().toString());
+                Emotion joy = new Joy(comment.getText().toString());
                 addEmotion(v, joy);
             }
         });
@@ -54,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         fear_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion fear = new Fear(emotion_id, comment.getText().toString());
+                Emotion fear = new Fear(comment.getText().toString());
                 addEmotion(v, fear);
             }
         });
@@ -63,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         anger_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion anger = new Anger(emotion_id, comment.getText().toString());
+                Emotion anger = new Anger(comment.getText().toString());
                 addEmotion(v, anger);
             }
         });
@@ -72,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         sad_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion sad = new Sadness(emotion_id, comment.getText().toString());
+                Emotion sad = new Sadness(comment.getText().toString());
                 addEmotion(v, sad);
             }
         });
@@ -81,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         surprised_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion surprised = new Surprise(emotion_id, comment.getText().toString());
+                Emotion surprised = new Surprise(comment.getText().toString());
                 addEmotion(v, surprised);
             }
         });
@@ -90,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         love_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
-                Emotion love = new Love(emotion_id, comment.getText().toString());
+                Emotion love = new Love(comment.getText().toString());
                 addEmotion(v, love);
             }
         });
@@ -101,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (EditEmotion.validCommentLength(e.getComment())) {
             emotions.add(e);
-            emotion_id += 1;
 //            viewHistory();
             emotions = EditEmotion.sortEmotions(emotions);
             Toast.makeText(this, "Added " + e.getTypeString() + " emotion", Toast.LENGTH_SHORT).show();
