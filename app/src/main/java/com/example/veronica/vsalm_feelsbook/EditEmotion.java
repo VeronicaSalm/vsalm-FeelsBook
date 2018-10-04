@@ -41,7 +41,7 @@ public class EditEmotion {
     private ArrayList<Emotion> emotions;
     private int position;
     private PopupWindow popupWindow;
-    private EmotionAdapter adapter;
+    private FileIO fio;
 
 
     EditEmotion(Context ctx, View parentView,
@@ -56,6 +56,7 @@ public class EditEmotion {
         boolean focusable = true; // lets taps outside the popup also dismiss it
         this.popupWindow = new PopupWindow(popupView, width, height, focusable);
 
+        this.fio = new FileIO();
         this.e = emotions.get(position);
         this.ctx = ctx;
         this.parentView = parentView;
@@ -87,6 +88,7 @@ public class EditEmotion {
     public void deleteEmotion() {
         emotions.remove(position);
         // notify the adapter that the data has changed
+        fio.saveInFile(emotions, ctx);
         ((ViewHistoryActivity) ctx).notifyAdapter();
 
     }
@@ -219,6 +221,8 @@ public class EditEmotion {
                 emotions.set(position, new_e);
                 // sort here
                 emotions = sortEmotions(emotions);
+
+                fio.saveInFile(emotions, ctx);
 
                 // notify the adapter that the data has changed
                 ((ViewHistoryActivity) ctx).notifyAdapter();

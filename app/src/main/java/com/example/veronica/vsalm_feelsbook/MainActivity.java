@@ -16,13 +16,23 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     // the main activity tracks a list of emotions
-    private ArrayList<Emotion> emotions=new ArrayList<Emotion>();
+    private ArrayList<Emotion> emotions;
     // needed for retrieving modified emotion list from the history view
     private int EMOTIONS_BACK = 1;
+    private FileIO fio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.fio = new FileIO();
+        emotions = fio.loadFromFile(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         // set xml layout to the main activity
         setContentView(R.layout.activity_main);
 
@@ -87,17 +97,23 @@ public class MainActivity extends AppCompatActivity {
                 addEmotion(v, love);
             }
         });
+    }
 
+    @Override
+    protected void onPause() {
+        fio.saveInFile(emotions, this);
+        super.onPause();
     }
 
     public void addEmotion(View view, Emotion e) {
 
         if (EditEmotion.validCommentLength(e.getComment())) {
             emotions.add(e);
-//            viewHistory();
             emotions = EditEmotion.sortEmotions(emotions);
             Toast.makeText(this, "Added " + e.getTypeString() + " emotion", Toast.LENGTH_SHORT).show();
-        } else {
+        }
+
+        else {
             Toast.makeText(this, "Comment must be at most 100 characters, not " + e.getComment().length(), Toast.LENGTH_LONG).show();
         }
 
@@ -142,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class Emotion implements Serializable {
+public class Emotion implements Serializable {
 
     // each emotion has a timestamp, comment (which may be ""), type, and emoji
     private Date timestamp;

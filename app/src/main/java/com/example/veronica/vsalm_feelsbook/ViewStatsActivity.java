@@ -30,19 +30,16 @@ public class ViewStatsActivity extends AppCompatActivity {
         emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
 
         displayStats();
-
-
     }
-
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//    }
 
     public void displayStats() {
         // compute necessary values
         Map<String, Integer> emotion_counts = getEmotionCounts();
+
+        // display the emotion counts on the stats page
         displayEmotionCounts(emotion_counts);
+
+        // compute and display the pie chart using the emotion counts
 //        displayPieChart(emotion_counts);
 
 
@@ -84,15 +81,6 @@ public class ViewStatsActivity extends AppCompatActivity {
         surprise.setText(emotion_counts.get("Surprise").toString());
         love.setText(emotion_counts.get("Love").toString());
 
-
-//        Toast.makeText(this, "There are " + emotion_counts.get("Joy") + " Joy emotions!", Toast.LENGTH_SHORT).show();
     }
 
-
-    //    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
 }
