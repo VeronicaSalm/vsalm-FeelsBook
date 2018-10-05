@@ -4,32 +4,32 @@
 
 # Acknowledgemens: Tutorials and Online Resources Followed. 
 
-The acknowledgements are in the format
-  author/username, title, URL
+The acknowledgements are in the format  
+  author/username, title, URL  
 
 ## Menus:
-Victor Wooding, Android Studio: Creating A Menu, https://www.youtube.com/watch?v=GqsQLoQ-6MI 
-Coding in Flow,  How to Add a Toolbar - Android Studio Tutorial, https://www.youtube.com/watch?v=DMkzIOLppf4 
-Codegear, How to use Toolbar in android Part 1 - Android Material Design || Toolbar as ActionBar, https://www.youtube.com/watch?v=QOADDUvGvD8 
-Codegear, How to use Toolbar in android Part 2 - Styling the Toolbar with Custom Theme | Material Design, https://www.youtube.com/watch?v=3x5tsJnuahw 
-Niranj Patel, Handling a Menu Item Click Event - Android, https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android 
-
+Victor Wooding, Android Studio: Creating A Menu, https://www.youtube.com/watch?v=GqsQLoQ-6MI   
+Coding in Flow,  How to Add a Toolbar - Android Studio Tutorial, https://www.youtube.com/watch?v=DMkzIOLppf4   
+Codegear, How to use Toolbar in android Part 1 - Android Material Design || Toolbar as ActionBar, https://www.youtube.com/watch?v=QOADDUvGvD8   
+Codegear, How to use Toolbar in android Part 2 - Styling the Toolbar with Custom Theme | Material Design, https://www.youtube.com/watch?v=3x5tsJnuahw   
+Niranj Patel, Handling a Menu Item Click Event - Android, https://stackoverflow.com/questions/7479992/handling-a-menu-item-click-event-android   
+ 
 ## Developer.android.com:
-developer.android.com, Menus, https://developer.android.com/guide/topics/ui/menus 
-developer.android.com, Toolbar, https://developer.android.com/reference/android/widget/Toolbar 
-developer.android.com, Button, https://developer.android.com/reference/android/widget/Button 
-developer.android.com, Relative Layout, https://developer.android.com/guide/topics/ui/layout/relative 
-developer.android.com, Fragments, https://developer.android.com/guide/components/fragments 
-developer.android.com, Getting A Result From Another Activity, https://developer.android.com/training/basics/intents/result#java 
-developer.android.com, Spinner, https://developer.android.com/guide/topics/ui/controls/spinner
+developer.android.com, Menus, https://developer.android.com/guide/topics/ui/menus   
+developer.android.com, Toolbar, https://developer.android.com/reference/android/widget/Toolbar   
+developer.android.com, Button, https://developer.android.com/reference/android/widget/Button   
+developer.android.com, Relative Layout, https://developer.android.com/guide/topics/ui/layout/relative   
+developer.android.com, Fragments, https://developer.android.com/guide/components/fragments   
+developer.android.com, Getting A Result From Another Activity, https://developer.android.com/training/basics/intents/result#java   
+developer.android.com, Spinner, https://developer.android.com/guide/topics/ui/controls/spinner  
 
-## Icons used for images (attribution as specified by website):
-Love Icon made by https://www.flaticon.com/free-icon/in-love_187154  from www.flaticon.com
-Fear Icon made byhttps://www.flaticon.com/free-icon/scared_725100#term=scared&page=1&position=38  from www.flaticon.com
-Joy Icon made byhttps://www.flaticon.com/free-icon/happy_187130  from www.flaticon.com
-Sadness Icon made byhttps://www.flaticon.com/free-icon/sad_187143  from www.flaticon.com
-Surprise Icon made byhttps://www.flaticon.com/free-icon/surprised_187135  from www.flaticon.com
-Anger Icon made byhttps://www.flaticon.com/free-icon/mad_187146  from www.flaticon.com
+## Icons used for images (attribution as specified by website):  
+Love Icon made by https://www.flaticon.com/free-icon/in-love_187154  from www.flaticon.com  
+Fear Icon made byhttps://www.flaticon.com/free-icon/scared_725100#term=scared&page=1&position=38  from www.flaticon.com  
+Joy Icon made byhttps://www.flaticon.com/free-icon/happy_187130  from www.flaticon.com  
+Sadness Icon made byhttps://www.flaticon.com/free-icon/sad_187143  from www.flaticon.com  
+Surprise Icon made byhttps://www.flaticon.com/free-icon/surprised_187135  from www.flaticon.com  
+Anger Icon made byhttps://www.flaticon.com/free-icon/mad_187146  from www.flaticon.com  
 
 
 ## ListViews:
