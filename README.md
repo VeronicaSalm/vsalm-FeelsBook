@@ -51,11 +51,11 @@ Jakob Jenkov, Java SimpleDateFormat, http://tutorials.jenkov.com/java-internatio
 Oracle Documentation, Class SimpleDateFormat, https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html  
 
 ### Deleting Elements:
-https://stackoverflow.com/questions/46645539/removing-object-of-arraylist-by-using-its-unique-id   
-http://www.migapro.com/click-events-listview-gridview/  
-https://www.youtube.com/watch?v=ZEEYYvVwJGY   
-https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android   
-https://stackoverflow.com/questions/920306/sending-data-back-to-the-main-activity-in-android/947560   
+Kayaman, Removing Object of ArrayList by using it's unique ID, https://stackoverflow.com/questions/46645539/removing-object-of-arraylist-by-using-its-unique-id   
+Miguel Kano, Handling click events within AdapterView such as ListView and GridView, http://www.migapro.com/click-events-listview-gridview/  
+Johnathan Davis, Android List view with clickable button, https://www.youtube.com/watch?v=ZEEYYvVwJGY   
+ρяσѕρєя K, How to pass data from 2nd activity to 1st activity when pressed back? - android, https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android   
+Reto Meier, Sending data back to the Main Activity in Android, https://stackoverflow.com/questions/920306/sending-data-back-to-the-main-activity-in-android/947560   
 
 ### Editing Elements:
 https://tekeye.uk/android/examples/ui/android-popup-window   
