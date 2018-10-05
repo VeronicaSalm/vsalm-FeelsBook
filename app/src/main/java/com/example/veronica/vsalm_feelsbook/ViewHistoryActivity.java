@@ -7,15 +7,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-
-import java.io.File;
 import java.util.ArrayList;
 
 public class ViewHistoryActivity extends AppCompatActivity {
     EmotionAdapter adapter;
     ListView emotionView;
     ArrayList<Emotion> emotions;
-    PopupWindow popupWindow;
     FileIO fio = new FileIO();
 
     @Override
@@ -41,7 +38,7 @@ public class ViewHistoryActivity extends AppCompatActivity {
 
         adapter = new EmotionAdapter(this, emotions);
 
-        emotionView = (ListView) findViewById(R.id.emotionList);
+        emotionView = findViewById(R.id.emotionList);
         emotionView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 

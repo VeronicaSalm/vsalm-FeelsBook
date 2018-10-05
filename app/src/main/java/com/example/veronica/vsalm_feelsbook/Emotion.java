@@ -4,6 +4,12 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/* Class: Emotion
+
+Implements the main functionality of an emotion,
+which is common among all emotion subclasses.
+
+ */
 public class Emotion implements Serializable {
 
     // each emotion has a timestamp, comment (which may be ""), type, and emoji
@@ -27,7 +33,6 @@ public class Emotion implements Serializable {
     Emotion(String c) {
         this.timestamp = new Date(System.currentTimeMillis());
         this.comment = c;
-
     }
 
     // getters for each emotion attribute
@@ -40,8 +45,7 @@ public class Emotion implements Serializable {
     public void setComment(String new_c) { this.comment = new_c; }
     public void setTimestamp(Date t) { this.timestamp = t; }
     public void setTypeString(String t) { this.type = t; }
-    public void setEmoji(int imgid) { this.emoji = imgid; }// the base class is initialized using only a comment
-    // emoji and type are set in the subclasses
+    public void setEmoji(int imgid) { this.emoji = imgid; }
 
     // return the emoji type strings
     public static String[] getTypes() { return type_list; }
@@ -49,20 +53,19 @@ public class Emotion implements Serializable {
 
     // allows retrieval of the full date in a nicely formatted string
     public  String getTimestampString() {
-        SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy hh:mm a");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd'T'HH:mm:ss");
         return df.format(this.timestamp);
     }
 
     // retrieval of only the time portion of the date
     public  String getTimeString() {
-        SimpleDateFormat df = new SimpleDateFormat("hh:mm a");
+        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
         return df.format(this.timestamp);
     }
 
     // retrieval of only the day, month, and year of the date
     public String getDateString() {
-        SimpleDateFormat df = new SimpleDateFormat("MMM dd, yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
         return df.format(this.timestamp);
     }
-
 }

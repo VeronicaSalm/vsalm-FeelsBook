@@ -1,14 +1,10 @@
 package com.example.veronica.vsalm_feelsbook;
 
-import android.app.Activity;
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,10 +19,12 @@ public class ViewStatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_stats);
 
+        // set up the toolbar with the appropriate subtitle
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setSubtitle("Statistics");
 
+        // get the emotions from the intent
         emotions = (ArrayList<Emotion>) getIntent().getSerializableExtra("Emotions");
 
         displayStats();
@@ -38,42 +36,41 @@ public class ViewStatsActivity extends AppCompatActivity {
 
         // display the emotion counts on the stats page
         displayEmotionCounts(emotion_counts);
-
-        // compute and display the pie chart using the emotion counts
-//        displayPieChart(emotion_counts);
-
-
     }
 
-    public void displayPieChart(Map<String, Integer> emotion_counts) {
-        // compute necessary values
-
-    }
-
+    // Count all emotions in the emotion list
+    // store them by type in a HashMap
     public Map<String, Integer> getEmotionCounts() {
 
         Map<String, Integer> emotion_counts = new HashMap<String, Integer>();
 
+        // initialize all types to have a count of 0
         for (String type : Emotion.getTypes()) {
             emotion_counts.put(type, 0);
         }
 
+        // do a simple frequency count on all emotions in the list
         for (Emotion e: emotions) {
             String type = e.getTypeString();
             emotion_counts.put(type, emotion_counts.get(type) + 1);
         }
 
+        // return the map of counts for display
         return emotion_counts;
     }
 
+    /* Given the map of emotion type to count, display the emotion counts. */
     public void displayEmotionCounts(Map<String, Integer> emotion_counts) {
 
-        TextView joy = (TextView) findViewById(R.id.joyCount);
-        TextView fear = (TextView) findViewById(R.id.fearCount);
-        TextView anger = (TextView) findViewById(R.id.angerCount);
-        TextView sadness = (TextView) findViewById(R.id.sadCount);
-        TextView surprise = (TextView) findViewById(R.id.surpriseCount);
-        TextView love = (TextView) findViewById(R.id.loveCount);
+        // initialize the six textviews where the counts will display
+        TextView joy = findViewById(R.id.joyCount);
+        TextView fear = findViewById(R.id.fearCount);
+        TextView anger = findViewById(R.id.angerCount);
+        TextView sadness = findViewById(R.id.sadCount);
+        TextView surprise = findViewById(R.id.surpriseCount);
+        TextView love = findViewById(R.id.loveCount);
+
+        // set the text of the views to the given count
         joy.setText(emotion_counts.get("Joy").toString());
         fear.setText(emotion_counts.get("Fear").toString());
         anger.setText(emotion_counts.get("Anger").toString());
@@ -82,5 +79,4 @@ public class ViewStatsActivity extends AppCompatActivity {
         love.setText(emotion_counts.get("Love").toString());
 
     }
-
 }
