@@ -34,7 +34,7 @@ public class ViewStatsActivity extends AppCompatActivity {
         displayStats();
     }
 
-    public void displayStats() {
+    private void displayStats() {
         // compute necessary values
         Map<String, Integer> emotion_counts = getEmotionCounts();
 
@@ -44,7 +44,7 @@ public class ViewStatsActivity extends AppCompatActivity {
 
     // Count all emotions in the emotion list
     // store them by type in a HashMap
-    public Map<String, Integer> getEmotionCounts() {
+    private Map<String, Integer> getEmotionCounts() {
 
         Map<String, Integer> emotion_counts = new HashMap<String, Integer>();
 
@@ -64,7 +64,7 @@ public class ViewStatsActivity extends AppCompatActivity {
     }
 
     /* Given the map of emotion type to count, display the emotion counts. */
-    public void displayEmotionCounts(Map<String, Integer> emotion_counts) {
+    private void displayEmotionCounts(Map<String, Integer> emotion_counts) {
 
         // initialize the six textviews where the counts will display
         TextView joy = findViewById(R.id.joyCount);

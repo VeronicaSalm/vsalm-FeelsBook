@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion joy = new Joy(comment.getText().toString());
-                addEmotion(v, joy);
+                addEmotion(joy);
             }
         });
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion fear = new Fear(comment.getText().toString());
-                addEmotion(v, fear);
+                addEmotion(fear);
             }
         });
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion anger = new Anger(comment.getText().toString());
-                addEmotion(v, anger);
+                addEmotion(anger);
             }
         });
 
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion sad = new Sadness(comment.getText().toString());
-                addEmotion(v, sad);
+                addEmotion(sad);
             }
         });
 
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion surprised = new Surprise(comment.getText().toString());
-                addEmotion(v, surprised);
+                addEmotion(surprised);
             }
         });
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText comment = (EditText) findViewById(R.id.enterComment);
                 Emotion love = new Love(comment.getText().toString());
-                addEmotion(v, love);
+                addEmotion(love);
             }
         });
     }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
     Otherwise, a Toast message is printed to the screen and the
     user must edit their comment and try again.
      */
-    public void addEmotion(View view, Emotion e) {
+    public void addEmotion(Emotion e) {
 
         if (EditEmotion.validCommentLength(e.getComment())) {
             emotions.add(e);
