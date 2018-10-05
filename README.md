@@ -24,6 +24,7 @@ developer.android.com, Relative Layout, https://developer.android.com/guide/topi
 developer.android.com, Fragments, https://developer.android.com/guide/components/fragments   
 developer.android.com, Getting A Result From Another Activity, https://developer.android.com/training/basics/intents/result#java   
 developer.android.com, Spinner, https://developer.android.com/guide/topics/ui/controls/spinner  
+developer.android.com, Pickers, https://developer.android.com/guide/topics/ui/controls/pickers
 
 ### Icons used for images (attribution as specified by website):  
 Love Icon made by https://www.flaticon.com/free-icon/in-love_187154  from www.flaticon.com  
@@ -73,9 +74,8 @@ maryam, Error spinner in popup window when I click, https://stackoverflow.com/qu
 Brandon O'Rourke, Android: Create spinner programmatically from array, https://stackoverflow.com/questions/2784081/android-create-spinner-programmatically-from-array     
 
 ### Other:
-https://stackoverflow.com/questions/13474982/how-to-center-a-textview-inside-a-linearlayout   
-https://stackoverflow.com/questions/1711801/how-to-create-a-calendar-object-in-java   
-https://www.journaldev.com/9976/android-date-time-picker-dialog   
-http://www.java2s.com/Tutorials/Java/Date/Date_Convert/Convert_Calendar_to_Date_in_Java.htm   
-https://developer.android.com/guide/topics/ui/controls/pickers   
+How to center a textview inside a linearlayout, https://stackoverflow.com/questions/13474982/how-to-center-a-textview-inside-a-linearlayout   
+How to create a calendar object in Java, https://stackoverflow.com/questions/1711801/how-to-create-a-calendar-object-in-java   
+Android Date Time Picker Dialog, https://www.journaldev.com/9976/android-date-time-picker-dialog   
+Convert Calendar to Date in Java, http://www.java2s.com/Tutorials/Java/Date/Date_Convert/Convert_Calendar_to_Date_in_Java.htm   
 https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property   
