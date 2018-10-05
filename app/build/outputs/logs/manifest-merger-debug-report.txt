@@ -1,0 +1,176 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:design:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/25727a937a8c9cd8e180f9bf1f73df0f/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/20a067fdbccd3ab1dd9e899d4a9f8172/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/veronica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fec8e4e7a1c3f7b1acb9fb3a542eafe6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/a638f824429df44f63978b72f17dc429/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4f09dbcdfdd0352375472277690a6584/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6e94bef35a798f0c41e614919b3f4395/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d4e8a52512c0558ac3db00c85a20ccd6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/6af9c4d6c7f537dd112d20237e29d0a5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b76ea9a5b5fc53896c5189fa590815c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/0fed205c38cce0abcff7a34d88459e92/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5995d92773d54f26c0be6d6ee6bf62a2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/7e515df6eb3df3c446aa5e2b70add7a6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8c0edff61092db71a39db26157865ca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/c250c77ea98ef01405c2a82e010a3a85/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/03b69f6810f0f43720566f77c4b02e2e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fec94018e42f7a48c23446be960cd4fc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/f2d1dce257088ef742bcbca5c06075cc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/328bd0d1ada20749530c4f6b7b240427/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d48c6a0def1dd1e98685cba6c518ced4/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/40cadbde89ce2cf119b18b797c3d0441/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ae8d2744bbeda8186ea2f14b9e73fd42/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3f4ac83e5209cb26488a059a84663dc7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/e8fc955afdee2f6f8c2b4c5b530c4cfb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cad2781383ebc7660604d23fedca913a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d6f1c5e0e8bf9c7a7a30bdb2e80ee0aa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/d3cf93c2785d41b62f857097f6f54eeb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/f28ebda4841d1bdf64fc7390991a7954/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88b7f5df02081eae87633ebc59b09684/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a24a70e43fa305290d13c79ec565fd15/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ecd84ca6df5263f4dc04da2df13046d5/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:3:5-51
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:5:5-21:19
+MERGED from [com.android.support:design:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/25727a937a8c9cd8e180f9bf1f73df0f/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/25727a937a8c9cd8e180f9bf1f73df0f/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/veronica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fec8e4e7a1c3f7b1acb9fb3a542eafe6/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/veronica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fec8e4e7a1c3f7b1acb9fb3a542eafe6/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d48c6a0def1dd1e98685cba6c518ced4/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d48c6a0def1dd1e98685cba6c518ced4/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.veronica.vsalm_feelsbook.MainActivity
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.veronica.vsalm_feelsbook.ViewHistoryActivity
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:19:9-57
+	android:name
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:19:19-54
+activity#com.example.veronica.vsalm_feelsbook.ViewStatsActivity
+ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:20:9-64
+	android:name
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml:20:19-52
+uses-sdk
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/25727a937a8c9cd8e180f9bf1f73df0f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/25727a937a8c9cd8e180f9bf1f73df0f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/20a067fdbccd3ab1dd9e899d4a9f8172/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/20a067fdbccd3ab1dd9e899d4a9f8172/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/veronica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fec8e4e7a1c3f7b1acb9fb3a542eafe6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/veronica/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/fec8e4e7a1c3f7b1acb9fb3a542eafe6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/a638f824429df44f63978b72f17dc429/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/a638f824429df44f63978b72f17dc429/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4f09dbcdfdd0352375472277690a6584/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/4f09dbcdfdd0352375472277690a6584/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6e94bef35a798f0c41e614919b3f4395/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6e94bef35a798f0c41e614919b3f4395/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d4e8a52512c0558ac3db00c85a20ccd6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d4e8a52512c0558ac3db00c85a20ccd6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/6af9c4d6c7f537dd112d20237e29d0a5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/6af9c4d6c7f537dd112d20237e29d0a5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b76ea9a5b5fc53896c5189fa590815c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b76ea9a5b5fc53896c5189fa590815c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/0fed205c38cce0abcff7a34d88459e92/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/0fed205c38cce0abcff7a34d88459e92/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5995d92773d54f26c0be6d6ee6bf62a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/5995d92773d54f26c0be6d6ee6bf62a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/7e515df6eb3df3c446aa5e2b70add7a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/7e515df6eb3df3c446aa5e2b70add7a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8c0edff61092db71a39db26157865ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8c0edff61092db71a39db26157865ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/c250c77ea98ef01405c2a82e010a3a85/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/c250c77ea98ef01405c2a82e010a3a85/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/03b69f6810f0f43720566f77c4b02e2e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/03b69f6810f0f43720566f77c4b02e2e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fec94018e42f7a48c23446be960cd4fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/fec94018e42f7a48c23446be960cd4fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/f2d1dce257088ef742bcbca5c06075cc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/f2d1dce257088ef742bcbca5c06075cc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/328bd0d1ada20749530c4f6b7b240427/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/328bd0d1ada20749530c4f6b7b240427/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a1c2a13de68b367258c645edaf448ce6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d48c6a0def1dd1e98685cba6c518ced4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/d48c6a0def1dd1e98685cba6c518ced4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/40cadbde89ce2cf119b18b797c3d0441/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/40cadbde89ce2cf119b18b797c3d0441/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ae8d2744bbeda8186ea2f14b9e73fd42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/ae8d2744bbeda8186ea2f14b9e73fd42/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3f4ac83e5209cb26488a059a84663dc7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3f4ac83e5209cb26488a059a84663dc7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/e8fc955afdee2f6f8c2b4c5b530c4cfb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/e8fc955afdee2f6f8c2b4c5b530c4cfb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cad2781383ebc7660604d23fedca913a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/cad2781383ebc7660604d23fedca913a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d6f1c5e0e8bf9c7a7a30bdb2e80ee0aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d6f1c5e0e8bf9c7a7a30bdb2e80ee0aa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/d3cf93c2785d41b62f857097f6f54eeb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/d3cf93c2785d41b62f857097f6f54eeb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/f28ebda4841d1bdf64fc7390991a7954/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/veronica/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/f28ebda4841d1bdf64fc7390991a7954/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88b7f5df02081eae87633ebc59b09684/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/88b7f5df02081eae87633ebc59b09684/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a24a70e43fa305290d13c79ec565fd15/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/a24a70e43fa305290d13c79ec565fd15/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ecd84ca6df5263f4dc04da2df13046d5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/veronica/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ecd84ca6df5263f4dc04da2df13046d5/AndroidManifest.xml:20:5-44
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /home/veronica/Documents/C301/assignment1/vsalm-FeelsBook/app/src/main/AndroidManifest.xml
