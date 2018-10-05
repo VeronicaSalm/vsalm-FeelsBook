@@ -1,8 +1,10 @@
 # vsalm-FeelsBook
 
+Application created for CMPUT 301 at the University of Alberta, Fall 2018.   
+  
+The app is designed to allow the user to simply and intuitively track emotions, view counts, and see emotion history. Emotions can also be easily edited to allow changing the timestamp, optional comment, and even the emotion type.   
 
-
-## Acknowledgemens: Tutorials and Online Resources Followed. 
+## Acknowledgements: Tutorials and Online Resources Followed. 
 
 The acknowledgements are in the format  
   author/username, title, URL  
