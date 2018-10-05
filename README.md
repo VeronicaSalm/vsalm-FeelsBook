@@ -57,19 +57,20 @@ Johnathan Davis, Android List view with clickable button, https://www.youtube.co
 ρяσѕρєя K, How to pass data from 2nd activity to 1st activity when pressed back? - android, https://stackoverflow.com/questions/14292398/how-to-pass-data-from-2nd-activity-to-1st-activity-when-pressed-back-android   
 Reto Meier, Sending data back to the Main Activity in Android, https://stackoverflow.com/questions/920306/sending-data-back-to-the-main-activity-in-android/947560   
 
-### Editing Elements:
-https://tekeye.uk/android/examples/ui/android-popup-window   
-https://www.tutorialspoint.com/android/android_alert_dialoges.htm   
+### Editing Elements and Popup Windows:
+
+Daniel S. Fowler, Pop-up Window in Android, https://tekeye.uk/android/examples/ui/android-popup-window   
+TutorialsPoint, Android - Alert Dialog, https://www.tutorialspoint.com/android/android_alert_dialoges.htm   
 
 ### Emotion counts:
-https://stackoverflow.com/questions/14743516/create-map-in-java   
+hd1, Create Map in Java, https://stackoverflow.com/questions/14743516/create-map-in-java   
 
-### Images:
-https://stackoverflow.com/questions/5089300/how-can-i-change-the-image-of-an-imageview   
+### Adding Emoji Images to the ListView:
+Sankar Ganesh, How can I change the image of an ImageView? [duplicate], https://stackoverflow.com/questions/5089300/how-can-i-change-the-image-of-an-imageview   
 
 ### Spinners:
-https://stackoverflow.com/questions/19487766/error-spinner-in-popup-window-when-i-click   
-https://stackoverflow.com/questions/2784081/android-create-spinner-programmatically-from-array     
+maryam, Error spinner in popup window when I click, https://stackoverflow.com/questions/19487766/error-spinner-in-popup-window-when-i-click   
+Brandon O'Rourke, Android: Create spinner programmatically from array, https://stackoverflow.com/questions/2784081/android-create-spinner-programmatically-from-array     
 
 ### Other:
 https://stackoverflow.com/questions/13474982/how-to-center-a-textview-inside-a-linearlayout   
