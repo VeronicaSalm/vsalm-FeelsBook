@@ -53,7 +53,7 @@ public class EditEmotion {
 
         // inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(LAYOUT_INFLATER_SERVICE);
-        this.popupView = inflater.inflate(R.layout.edit_comment, null);
+        this.popupView = inflater.inflate(R.layout.edit_emotion, null);
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         boolean focusable = true; // lets taps outside the popup also dismiss it
