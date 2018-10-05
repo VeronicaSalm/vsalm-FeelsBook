@@ -71,7 +71,7 @@ public class EditEmotion {
     // initialize the spinner view to allow selection of a new emotion type
     // the emotion types are extracted from a type list in the emotion class
     // and displayed using a spinner to control user input
-    public Spinner setUpSpinner(View popupView, Emotion e) {
+    private Spinner setUpSpinner(View popupView, Emotion e) {
         // attach the spinner to the emotion spinner layout
         Spinner spinner = popupView.findViewById(R.id.emotions_spinner);
 
