@@ -5,11 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/* Class: ViewStatsActivity
+
+Computes and presents the emotion counts given the
+list of emotions for the Statistics page.
+ */
 public class ViewStatsActivity extends AppCompatActivity {
 
     ArrayList<Emotion> emotions;

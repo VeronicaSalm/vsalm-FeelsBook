@@ -10,11 +10,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+/* Class: EmotionAdapter
+
+A custom adapter class for an ArrayList of emotions.
+Allows updating the listview of objects whenever the emotions
+in the list change.
+
+Contains a nested ViewHolder class used to define the view of
+each emotion (row) in the ListView.
+
+ */
 public class EmotionAdapter extends ArrayAdapter<Emotion> {
 
     private ArrayList<Emotion> emotions;
     private Context context;
 
+    // initialize the adapter and set the emotionList and context
     EmotionAdapter(Context context, ArrayList<Emotion> emotions) {
         super(context, R.layout.emotion_entry, emotions);
         this.emotions = emotions;
@@ -29,18 +40,21 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.emotion_entry, parent, false);
             ViewHolder viewHolder = new ViewHolder();
 
-            viewHolder.type = (TextView) convertView.findViewById(R.id.type);
-            viewHolder.date = (TextView) convertView.findViewById(R.id.date);
-            viewHolder.comment = (TextView) convertView.findViewById(R.id.comment);
-            viewHolder.emoji = (ImageView) convertView.findViewById(R.id.emoji);
+            // set the viewHolder attribute for each field of the emotion
+            // in the listview
+            viewHolder.type = convertView.findViewById(R.id.type);
+            viewHolder.date = convertView.findViewById(R.id.date);
+            viewHolder.comment = convertView.findViewById(R.id.comment);
+            viewHolder.emoji = convertView.findViewById(R.id.emoji);
 
+            // now set the values of the views to the emotion's values
             viewHolder.type.setText(emotion.getTypeString());
             viewHolder.date.setText(emotion.getTimestampString());
             viewHolder.comment.setText(emotion.getComment());
             viewHolder.emoji.setImageResource(emotion.getEmoji());
 
             // set up listener for the delete button
-            viewHolder.delete = (ImageButton) convertView.findViewById(R.id.delete);
+            viewHolder.delete = convertView.findViewById(R.id.delete);
             viewHolder.delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
@@ -64,10 +78,14 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
 
                 }
             });
+
+            // set the tag so that next time we can access this view holder
             convertView.setTag(viewHolder);
         }
 
         else {
+
+            // if the viewHolder is defined, get the
             myViewHolder = (ViewHolder) convertView.getTag();
             myViewHolder.type.setText(emotion.getTypeString());
             myViewHolder.date.setText(emotion.getTimestampString());
@@ -78,11 +96,10 @@ public class EmotionAdapter extends ArrayAdapter<Emotion> {
         return convertView;
     }
 
-    /* ViewHolder class:
+    /* ViewHolder class (nested):
 
         Stores the fields needed for each row in the ListView.
-
-     */
+    */
     public class ViewHolder {
         ImageButton edit;
         TextView comment;
