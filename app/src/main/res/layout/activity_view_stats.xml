@@ -34,10 +34,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946"
+        app:layout_constraintVertical_bias="0.771"
         app:srcCompat="@drawable/in_love_medium" />
 
     <TextView
@@ -49,10 +49,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <ImageView
         android:id="@+id/sadStats"
@@ -62,10 +62,10 @@
         android:contentDescription="@string/sad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
+        app:layout_constraintVertical_bias="0.771"
         app:srcCompat="@drawable/sad_medium" />
 
     <ImageView
@@ -76,10 +76,10 @@
         android:contentDescription="@string/fear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
+        app:layout_constraintVertical_bias="0.771"
         app:srcCompat="@drawable/scared_medium" />
 
     <ImageView
@@ -90,10 +90,10 @@
         android:contentDescription="@string/surprised"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
+        app:layout_constraintVertical_bias="0.946"
         app:srcCompat="@drawable/surprised_medium" />
 
     <ImageView
@@ -104,7 +104,7 @@
         android:contentDescription="@string/happy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fearStats"
         app:layout_constraintVertical_bias="0.542"
@@ -120,9 +120,10 @@
         android:contentDescription="@string/angry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadStats"
+        app:layout_constraintVertical_bias="0.64"
         app:srcCompat="@drawable/mad_medium" />
 
     <TextView
@@ -163,9 +164,7 @@
         android:layout_height="18dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="39dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginRight="39dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="@+id/sadStats"
