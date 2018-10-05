@@ -7,7 +7,7 @@ The app is designed to allow the user to simply and intuitively track emotions, 
 ## Acknowledgements: Tutorials and Online Resources Followed. 
 
 The acknowledgements are in the format  
-                <author/username/website>, <title>, URL, Last accessed: /<date/>
+                AUTHOR, TITLE, URL, Last accessed: DATE
 
 ### Menus:
 Victor Wooding, Android Studio: Creating A Menu, https://www.youtube.com/watch?v=GqsQLoQ-6MI, Last accessed Oct 1, 2018   
